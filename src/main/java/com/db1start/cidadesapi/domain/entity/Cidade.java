@@ -24,10 +24,16 @@ public class Cidade {
 	@JoinColumn(name = "estado_id")
 	private Estado uf;
 	
+
+	public Cidade() {}
 	
 	public Cidade(String nome, Estado uf) {
 		this.nome = nome;
 		this.uf = uf;
+	}
+	
+	public Long getId() {
+		return id;
 	}
 	
 	public String getNome() {

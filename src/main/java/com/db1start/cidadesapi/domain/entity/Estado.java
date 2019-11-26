@@ -27,10 +27,17 @@ public class Estado {
 	@OneToMany(mappedBy = "uf", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	List<Cidade> cidades;
 	
+	public Estado() {
+		this.cidades = new ArrayList<>();
+	}
 	
 	public Estado(String nome) {
 		this.nome = nome;
 		this.cidades = new ArrayList<>();
+	}
+	
+	public Long getId() {
+		return id;
 	}
 	
 	public String getNome() {
